@@ -13,11 +13,6 @@ Weather App es una aplicación web simple que permite a los usuarios obtener inf
 - CSS
 - JS
 
-## Requisitos
-- Navegador web moderno.
-- Conexión a Internet.
-
-
 ## Clona este repositorio:
    
    git clone https://github.com/tu-usuario/weather-app.git
