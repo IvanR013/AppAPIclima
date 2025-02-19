@@ -16,14 +16,31 @@ document.getElementById('botonBusqueda').addEventListener('click', () => {
 
 async function fetchDatosClima(ciudad) {
 
-    const response = await fetch(`${urlBase}?q=${ciudad}&appid=${apik}`)
-        .then(data => data.json())
-        .then(data => mostrarDatosClima(data))
+    try {
+        const response = await fetch(`${urlBase}?q=${ciudad}&appid=${apik}`);
+        if (!response.ok) {
+
+            throw new Error('No se encontraron datos');
+        }
+        const data = await response.json();
+        
+        mostrarDatosClima(data);
+    
+    } catch (error) {
+
+        mostrarError(`No se encontraron resultados para ${ciudad}. `,error);
+    }
+}
       
         
 
-}
+function mostrarError(mensaje) {
 
+    const divDatosClima = document.getElementById('datosClima');
+
+    divDatosClima.innerHTML = `<p>${mensaje}</p>`;
+
+}
 
 
 function mostrarDatosClima(data) {  
@@ -38,6 +55,12 @@ function mostrarDatosClima(data) {
     const presion = data.main.pressure;
     const icono = data.weather[0].icon;
     cambiarFondoClima(descripcion);
+
+    if (!data || !data.main || !data.weather) {
+        mostrarError('No se encontraron resultados.');
+        return;
+    }
+
 
 //Objeto de traducción para poder traducir las descripciones de la API
 const translations = {
