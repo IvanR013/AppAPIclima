@@ -7,12 +7,11 @@ Weather App es una aplicación web simple que permite a los usuarios obtener inf
 - Busca el clima de cualquier ciudad.
 - Muestra la temperatura, humedad, presión atmosférica, y una descripción del clima.
 - Incluye un ícono representativo del clima actual.
+- Incluye imágenes dinámicas según el pronóstico correspondiente.
 
 ## Tecnologías
 - HTML
 - CSS
 - JS
 
-## Clona este repositorio:
-   
-   git clone https://github.com/tu-usuario/weather-app.git
+
