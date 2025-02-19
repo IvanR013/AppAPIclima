@@ -41,20 +41,20 @@ function mostrarDatosClima(data) {
 
 //Objeto de traducción para poder traducir las descripciones de la API
 const translations = {
-    "clear sky": "cielo despejado, Lindo Día.",
+    "clear sky": "Cielo despejado, Lindo Día.",
     "few clouds": "Parcialmente nublado",
-    "scattered clouds": "Alguna nube",
-    "broken clouds": "nubes esacasas",
-    "shower rain": "lluvia ligera",
-    "rain": "lluvia",
+    "scattered clouds": "Con Alguna nube",
+    "broken clouds": "Con nubes esacasas",
+    "shower rain": "Con lluvia ligera",
+    "rain": "Con lluvia",
     "thunderstorm": "Se cae el cielo",
-    "snow": "nieve",
-    "mist": "neblina",
+    "snow": "Nevado",
+    "mist": "Con neblina",
     "overcast clouds": "Nublado",
-    "light rain": "Lluvia ligera",
-    "moderate rain": "Lluvia moderada",
-    "heavy intensity rain": "Lluvia intensa",
-    "light snow": "Nieve ligera"
+    "light rain": "Con Lluvia ligera",
+    "moderate rain": "Con Lluvia moderada",
+    "heavy intensity rain": "Con Lluvia intensa",
+    "light snow": "Con Nieve ligera"
 };
 
 //Función de fotos dinámicas según el clima que salga
@@ -73,7 +73,7 @@ function cambiarFondoClima(descripcion) {
         "thunderstorm": "url('Assets/rain.jpg')",
         "snow": "url('Assets/snow.jpg')",
         "light snow": "url('Assets/snow.jpg')",
-        "mist": "url('Assets/mist.jpeg')",
+        "mist": "url('Assets/mist.jpg')",
         "overcast clouds": "url('Assets/overcast clouds.jpg')"
     };
 
@@ -104,7 +104,7 @@ function cambiarFondoClima(descripcion) {
     iconoInfo.src = `https://openweathermap.org/img/wn/${icono}@2x.png`; //ícono
 
     const descripcionInfo = document.createElement('p');
-    descripcionInfo.textContent = `El día va a estar: ${descripcionTraducida}`;
+    descripcionInfo.textContent = `El día va a estar : ${descripcionTraducida}`;
 
     divDatosClima.appendChild(ciudadTitulo);
     divDatosClima.appendChild(temperaturaInfo); //Estas líneas meten esos datos en el div "datosclima" sin escribir en el HTML.
