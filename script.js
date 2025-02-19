@@ -71,8 +71,8 @@ function cambiarFondoClima(descripcion) {
         "moderate rain": "url('Assets/rain.jpg')",
         "heavy intensity rain": "url('Assets/rain.jpg')",
         "thunderstorm": "url('Assets/rain.jpg')",
-        "snow": "url('Assets/snow.jpeg')",
-        "light snow": "url('Assets/snow.jpeg')",
+        "snow": "url('Assets/snow.jpg')",
+        "light snow": "url('Assets/snow.jpg')",
         "mist": "url('Assets/mist.jpeg')",
         "overcast clouds": "url('Assets/overcast clouds.jpg')"
     };
