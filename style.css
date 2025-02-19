@@ -1,7 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(19, 98, 134);
+  font-family: 'Roboto', sans-serif;
+
+    background-image: url(/Assets/PortFondoapiClima.jpg);
+    background-size: cover; /* Esto hace que la imagen cubra todo el área del fondo */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f0f0f0; /* Color de fondo predeterminado */
+    transition: background-image 0.5s ease-in-out; /* Transición suave */
+    overflow: auto;
+    overflow: hidden; 
   }
+
+  body::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento */
+}
   
   .contenedor {
     max-width: 500px;
@@ -10,6 +25,8 @@ body {
     text-align: center;
     background-color: rgb(182, 203, 206);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 60px;
   }
   
   h1 {
